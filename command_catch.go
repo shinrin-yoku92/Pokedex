@@ -26,6 +26,7 @@ func commandCatch(cfg *config, args ...string) error {
 		fmt.Printf("%s escaped!\n", pokemon.Name)
 	} else {
 		fmt.Printf("%s was caught!\n", pokemon.Name)
+		fmt.Printf("%s's data was added to your Pokedex.\n", pokemon.Name)
 		if cfg.caughtPokemon == nil {
 			cfg.caughtPokemon = make(map[string]pokeapi.Pokemon)
 		}
